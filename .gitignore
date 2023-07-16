@@ -2,4 +2,3 @@ node_modules
 .env
 RAW_interactions.csv
 RAW_recipes.csv
-cleaned_data.json
