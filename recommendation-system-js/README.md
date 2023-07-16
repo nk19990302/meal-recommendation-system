@@ -35,3 +35,5 @@ Implemented get api to fetch the recommended items by providing keywords.
 2. incorporation of user profile to show recommendation
 3. accuracy of recommendation
 4. ....
+
+`Note: This repo contains trained data only.`
