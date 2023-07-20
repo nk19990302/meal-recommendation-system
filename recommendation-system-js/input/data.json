@@ -1,0 +1,8 @@
+[
+    { "id": 0, "keywords": ["banana", "fruits", "veg"] },
+    { "id": 1, "keywords": ["chicken", "non-veg", "biryani", "rice"] },
+    { "id": 2, "keywords": ["egg", "kari", "non-veg"] },
+    { "id": 3, "keywords": ["bread", "roti", "rice", "veg", "morning"] },
+    { "id": 4, "keywords": ["veg", "soup", "snacks"] },
+    { "id": 5, "keywords": ["carrot", "fruits", "mango", "morning"] }
+]

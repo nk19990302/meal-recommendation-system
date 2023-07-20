@@ -1,4 +1,4 @@
-/* all functions to deal with vectors */
+/* it's being for training purpose */
 const createFeatureVectors = (items, vocabulary) => {
     return items.map((item, index) => {
         console.log(`${index} - creating feature vectors...`);
@@ -15,6 +15,7 @@ const createFeatureVectors = (items, vocabulary) => {
     });
 };
 
+/* it's being for recommendation purpose */
 const createFeatureVectorsForKeyword = (keywords, vocabulary) => {
     console.log(`creating feature vectors...`);
     const featureVector = new Array(vocabulary.length).fill(0);
@@ -29,6 +30,7 @@ const createFeatureVectorsForKeyword = (keywords, vocabulary) => {
     return featureVector;
 };
 
+/* it's being for finding similar items in recommendation */
 const calculateCosineSimilarity = (vector1, vector2) => {
     if (vector1.length !== vector2.length) {
         throw new Error("Vector dimensions must match");
