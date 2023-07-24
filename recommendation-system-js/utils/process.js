@@ -49,6 +49,30 @@ const extractKeywords = (sentences) => {
     return keywords;
 };
 
+const processKeywords = (keywords) => {
+    // Step 2: Preprocessing
+    const cleanedWords = keywords.map((word) =>
+        word.replace(/[^a-zA-Z0-9]/g, "")
+    );
+
+    // Step 3: Case normalization
+    const lowercasedWords = cleanedWords.map((word) => word.toLowerCase());
+
+    // Step 4: Remove stop words (optional)
+    const filteredWords = lowercasedWords.filter(
+        (word) => !stopWords.includes(word)
+    );
+
+    // Step 5: Deduplication
+    const uniqueWords = [...new Set(filteredWords)];
+
+    // Step 6: Stemming
+    const stemmed = uniqueWords.map((word) => stemmer.stem(word));
+
+    // Step 7: Keywords extraction
+    return stemmed;
+};
+
 const stopWords = [
     "a",
     "an",
@@ -85,4 +109,5 @@ module.exports = {
     stringifyLargeText,
     stringifyLargeTextJson,
     extractKeywords,
+    processKeywords,
 };

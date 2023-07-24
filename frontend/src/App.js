@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 import HomePage from "./containers/HomePage";
 import GlobalStyle from "./styles/globalStyles";
+import Products from "./containers/Products";
 
 function App() {
     return (
         <AppWrapper>
-            <GlobalStyle />
+            {/* <GlobalStyle /> */}
+            {/* <Products /> */}
             <HomePage />
         </AppWrapper>
     );

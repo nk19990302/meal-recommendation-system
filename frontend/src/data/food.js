@@ -1,18 +1,19 @@
-[
+const foodItems = [
     {
-        "id": 1,
-        "name": "Classic Cheeseburger",
-        "description": "Juicy beef patty topped with cheese, lettuce, and tomato, served in a bun.",
-        "ingredients": [
+        id: 1,
+        name: "Classic Cheeseburger",
+        description:
+            "Juicy beef patty topped with cheese, lettuce, and tomato, served in a bun.",
+        ingredients: [
             "Beef Patty",
             "Cheese",
             "Lettuce",
             "Tomato",
             "Burger Bun",
             "Ketchup",
-            "Mustard"
+            "Mustard",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Burger",
             "Beef",
@@ -29,22 +30,23 @@
             "Medium Spice",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 2,
-        "name": "Margherita Pizza",
-        "description": "Traditional pizza topped with tomato sauce, mozzarella, and fresh basil leaves.",
-        "ingredients": [
+        id: 2,
+        name: "Margherita Pizza",
+        description:
+            "Traditional pizza topped with tomato sauce, mozzarella, and fresh basil leaves.",
+        ingredients: [
             "Pizza Dough",
             "Tomato Sauce",
             "Mozzarella Cheese",
             "Fresh Basil Leaves",
-            "Olive Oil"
+            "Olive Oil",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Pizza",
             "Vegetarian",
@@ -56,22 +58,23 @@
             "Olive Oil",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 3,
-        "name": "Chicken Caesar Salad",
-        "description": "Grilled chicken breast served on a bed of romaine lettuce with Caesar dressing and croutons.",
-        "ingredients": [
+        id: 3,
+        name: "Chicken Caesar Salad",
+        description:
+            "Grilled chicken breast served on a bed of romaine lettuce with Caesar dressing and croutons.",
+        ingredients: [
             "Chicken Breast",
             "Romaine Lettuce",
             "Caesar Dressing",
             "Croutons",
-            "Parmesan Cheese"
+            "Parmesan Cheese",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Salad",
             "Chicken",
@@ -86,15 +89,15 @@
             "Mild Spice",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 4,
-        "name": "Spaghetti Bolognese",
-        "description": "Pasta served with rich and hearty meat sauce.",
-        "ingredients": [
+        id: 4,
+        name: "Spaghetti Bolognese",
+        description: "Pasta served with rich and hearty meat sauce.",
+        ingredients: [
             "Spaghetti",
             "Ground Beef",
             "Tomato Sauce",
@@ -103,9 +106,9 @@
             "Carrots",
             "Celery",
             "Oregano",
-            "Basil"
+            "Basil",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Pasta",
             "Beef",
@@ -124,15 +127,16 @@
             "Medium Spice",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 5,
-        "name": "Vegetable Curry",
-        "description": "Assorted vegetables cooked in a flavorful curry sauce, served with steamed rice.",
-        "ingredients": [
+        id: 5,
+        name: "Vegetable Curry",
+        description:
+            "Assorted vegetables cooked in a flavorful curry sauce, served with steamed rice.",
+        ingredients: [
             "Assorted Vegetables (e.g., Cauliflower, Carrots, Potatoes, Peas)",
             "Coconut Milk",
             "Curry Paste",
@@ -140,9 +144,9 @@
             "Garlic",
             "Ginger",
             "Turmeric",
-            "Cilantro"
+            "Cilantro",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Vegetarian",
             "Evening",
@@ -163,21 +167,22 @@
             "Medium Spice",
             "Indian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 6,
-        "name": "Caprese Salad",
-        "description": "Fresh and light salad with tomatoes, mozzarella, and basil, drizzled with balsamic glaze.",
-        "ingredients": [
+        id: 6,
+        name: "Caprese Salad",
+        description:
+            "Fresh and light salad with tomatoes, mozzarella, and basil, drizzled with balsamic glaze.",
+        ingredients: [
             "Tomatoes",
             "Mozzarella Cheese",
             "Fresh Basil Leaves",
-            "Balsamic Glaze"
+            "Balsamic Glaze",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Salad",
             "Vegetarian",
@@ -188,16 +193,17 @@
             "Balsamic Glaze",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 7,
-        "name": "BBQ Ribs",
-        "description": "Tender pork ribs glazed with BBQ sauce, perfect for meat lovers.",
-        "ingredients": ["Pork Ribs", "BBQ Sauce", "Salt", "Pepper"],
-        "keywords": [
+        id: 7,
+        name: "BBQ Ribs",
+        description:
+            "Tender pork ribs glazed with BBQ sauce, perfect for meat lovers.",
+        ingredients: ["Pork Ribs", "BBQ Sauce", "Salt", "Pepper"],
+        keywords: [
             "Dinner",
             "Pork",
             "Evening",
@@ -210,22 +216,23 @@
             "Medium Spice",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 8,
-        "name": "Margherita Flatbread",
-        "description": "Delicious flatbread topped with tomato sauce, mozzarella, and fresh basil leaves.",
-        "ingredients": [
+        id: 8,
+        name: "Margherita Flatbread",
+        description:
+            "Delicious flatbread topped with tomato sauce, mozzarella, and fresh basil leaves.",
+        ingredients: [
             "Flatbread",
             "Tomato Sauce",
             "Mozzarella Cheese",
             "Fresh Basil Leaves",
-            "Olive Oil"
+            "Olive Oil",
         ],
-        "keywords": [
+        keywords: [
             "Snack",
             "Flatbread",
             "Vegetarian",
@@ -237,15 +244,16 @@
             "Olive Oil",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 9,
-        "name": "Chicken Alfredo Pasta",
-        "description": "Creamy Alfredo sauce with tender chicken served over fettuccine pasta.",
-        "ingredients": [
+        id: 9,
+        name: "Chicken Alfredo Pasta",
+        description:
+            "Creamy Alfredo sauce with tender chicken served over fettuccine pasta.",
+        ingredients: [
             "Chicken Breast",
             "Fettuccine Pasta",
             "Heavy Cream",
@@ -254,9 +262,9 @@
             "Garlic",
             "Salt",
             "Pepper",
-            "Parsley"
+            "Parsley",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Pasta",
             "Chicken",
@@ -275,23 +283,24 @@
             "Medium Spice",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 10,
-        "name": "Avocado Toast",
-        "description": "Sliced avocado spread on toasted bread with a sprinkle of salt and pepper.",
-        "ingredients": [
+        id: 10,
+        name: "Avocado Toast",
+        description:
+            "Sliced avocado spread on toasted bread with a sprinkle of salt and pepper.",
+        ingredients: [
             "Avocado",
             "Bread",
             "Salt",
             "Pepper",
             "Lemon Juice",
-            "Red Pepper Flakes"
+            "Red Pepper Flakes",
         ],
-        "keywords": [
+        keywords: [
             "Breakfast",
             "Toast",
             "Vegetarian",
@@ -304,21 +313,22 @@
             "Red Pepper Flakes",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Morning"
+        bestTimeToServe: "Morning",
     },
     {
-        "id": 11,
-        "name": "Masala Dosa",
-        "description": "Crispy South Indian crepe made from fermented rice and lentil batter, served with chutney and sambar.",
-        "ingredients": [
+        id: 11,
+        name: "Masala Dosa",
+        description:
+            "Crispy South Indian crepe made from fermented rice and lentil batter, served with chutney and sambar.",
+        ingredients: [
             "Dosa Batter",
             "Potato Masala",
             "Coconut Chutney",
-            "Sambar"
+            "Sambar",
         ],
-        "keywords": [
+        keywords: [
             "Breakfast",
             "Dosa",
             "Vegetarian",
@@ -329,15 +339,16 @@
             "Sambar",
             "Indian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Morning"
+        bestTimeToServe: "Morning",
     },
     {
-        "id": 12,
-        "name": "Chicken Noodle Soup",
-        "description": "Comforting soup with chicken, noodles, and mixed vegetables in a flavorful broth.",
-        "ingredients": [
+        id: 12,
+        name: "Chicken Noodle Soup",
+        description:
+            "Comforting soup with chicken, noodles, and mixed vegetables in a flavorful broth.",
+        ingredients: [
             "Chicken",
             "Egg Noodles",
             "Carrots",
@@ -346,9 +357,9 @@
             "Garlic",
             "Chicken Broth",
             "Bay Leaf",
-            "Parsley"
+            "Parsley",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Soup",
             "Chicken",
@@ -367,23 +378,24 @@
             "Mild Spice",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 13,
-        "name": "Vegetable Stir-Fry",
-        "description": "Assorted vegetables stir-fried in a savory sauce, served with steamed rice.",
-        "ingredients": [
+        id: 13,
+        name: "Vegetable Stir-Fry",
+        description:
+            "Assorted vegetables stir-fried in a savory sauce, served with steamed rice.",
+        ingredients: [
             "Assorted Vegetables (e.g., Broccoli, Bell Peppers, Carrots)",
             "Soy Sauce",
             "Ginger",
             "Garlic",
             "Sesame Oil",
-            "Green Onions"
+            "Green Onions",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Vegetarian",
             "Afternoon",
@@ -398,15 +410,16 @@
             "Green Onions",
             "Chinese",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 14,
-        "name": "Fish Tacos",
-        "description": "Battered and fried fish topped with shredded cabbage, salsa, and creamy sauce, wrapped in tortillas.",
-        "ingredients": [
+        id: 14,
+        name: "Fish Tacos",
+        description:
+            "Battered and fried fish topped with shredded cabbage, salsa, and creamy sauce, wrapped in tortillas.",
+        ingredients: [
             "White Fish Fillets",
             "Tortillas",
             "Cabbage",
@@ -414,9 +427,9 @@
             "Onion",
             "Cilantro",
             "Lime",
-            "Sour Cream"
+            "Sour Cream",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Seafood",
             "Afternoon",
@@ -433,15 +446,16 @@
             "Medium Spice",
             "Mexican",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 15,
-        "name": "Mushroom Risotto",
-        "description": "Creamy risotto cooked with mushrooms, white wine, and parmesan cheese.",
-        "ingredients": [
+        id: 15,
+        name: "Mushroom Risotto",
+        description:
+            "Creamy risotto cooked with mushrooms, white wine, and parmesan cheese.",
+        ingredients: [
             "Arborio Rice",
             "Mushrooms",
             "Onion",
@@ -450,9 +464,9 @@
             "Vegetable Broth",
             "Butter",
             "Parmesan Cheese",
-            "Parsley"
+            "Parsley",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Vegetarian",
             "Evening",
@@ -467,24 +481,25 @@
             "Parsley",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 16,
-        "name": "Beef Stir-Fry",
-        "description": "Tender beef strips stir-fried with vegetables in a savory sauce, served with steamed rice.",
-        "ingredients": [
+        id: 16,
+        name: "Beef Stir-Fry",
+        description:
+            "Tender beef strips stir-fried with vegetables in a savory sauce, served with steamed rice.",
+        ingredients: [
             "Beef Steak",
             "Assorted Vegetables (e.g., Broccoli, Bell Peppers, Carrots)",
             "Soy Sauce",
             "Ginger",
             "Garlic",
             "Sesame Oil",
-            "Green Onions"
+            "Green Onions",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Beef",
             "Evening",
@@ -503,24 +518,24 @@
             "Medium Spice",
             "Chinese",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 17,
-        "name": "Pancakes",
-        "description": "Fluffy pancakes served with maple syrup and butter.",
-        "ingredients": [
+        id: 17,
+        name: "Pancakes",
+        description: "Fluffy pancakes served with maple syrup and butter.",
+        ingredients: [
             "All-Purpose Flour",
             "Milk",
             "Eggs",
             "Butter",
             "Maple Syrup",
             "Baking Powder",
-            "Vanilla Extract"
+            "Vanilla Extract",
         ],
-        "keywords": [
+        keywords: [
             "Breakfast",
             "Pancakes",
             "Vegetarian",
@@ -534,15 +549,16 @@
             "Vanilla Extract",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Morning"
+        bestTimeToServe: "Morning",
     },
     {
-        "id": 18,
-        "name": "Chicken Enchiladas",
-        "description": "Tortillas filled with shredded chicken, cheese, and enchilada sauce, baked to perfection.",
-        "ingredients": [
+        id: 18,
+        name: "Chicken Enchiladas",
+        description:
+            "Tortillas filled with shredded chicken, cheese, and enchilada sauce, baked to perfection.",
+        ingredients: [
             "Corn Tortillas",
             "Chicken",
             "Enchilada Sauce",
@@ -550,9 +566,9 @@
             "Onion",
             "Black Olives",
             "Cilantro",
-            "Sour Cream"
+            "Sour Cream",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Chicken",
             "Evening",
@@ -569,21 +585,22 @@
             "Medium Spice",
             "Mexican",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 19,
-        "name": "Caesar Salad",
-        "description": "Romaine lettuce topped with Caesar dressing, croutons, and parmesan cheese.",
-        "ingredients": [
+        id: 19,
+        name: "Caesar Salad",
+        description:
+            "Romaine lettuce topped with Caesar dressing, croutons, and parmesan cheese.",
+        ingredients: [
             "Romaine Lettuce",
             "Caesar Dressing",
             "Croutons",
-            "Parmesan Cheese"
+            "Parmesan Cheese",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Salad",
             "Vegetarian",
@@ -594,20 +611,21 @@
             "Parmesan Cheese",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 20,
-        "name": "Sushi Roll",
-        "description": "Delicious sushi rolls with various fillings such as fish, avocado, and cucumber.",
-        "ingredients": [
+        id: 20,
+        name: "Sushi Roll",
+        description:
+            "Delicious sushi rolls with various fillings such as fish, avocado, and cucumber.",
+        ingredients: [
             "Sushi Rice",
             "Nori Seaweed",
-            "Assorted Fillings (e.g., Tuna, Salmon, Avocado, Cucumber)"
+            "Assorted Fillings (e.g., Tuna, Salmon, Avocado, Cucumber)",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Sushi",
             "Seafood",
@@ -624,22 +642,23 @@
             "Mild Spice",
             "Japanese",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 21,
-        "name": "Fried Rice",
-        "description": "Stir-fried rice with vegetables, eggs, and a choice of meat or tofu.",
-        "ingredients": [
+        id: 21,
+        name: "Fried Rice",
+        description:
+            "Stir-fried rice with vegetables, eggs, and a choice of meat or tofu.",
+        ingredients: [
             "Cooked Rice",
             "Assorted Vegetables (e.g., Carrots, Peas, Corn)",
             "Eggs",
             "Soy Sauce",
-            "Green Onions"
+            "Green Onions",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Rice",
             "Evening",
@@ -653,24 +672,25 @@
             "Green Onions",
             "Chinese",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 22,
-        "name": "Tandoori Chicken",
-        "description": "Chicken marinated in yogurt and spices, grilled to perfection in a tandoor.",
-        "ingredients": [
+        id: 22,
+        name: "Tandoori Chicken",
+        description:
+            "Chicken marinated in yogurt and spices, grilled to perfection in a tandoor.",
+        ingredients: [
             "Chicken",
             "Yogurt",
             "Tandoori Masala",
             "Lemon Juice",
             "Garlic",
             "Ginger",
-            "Garam Masala"
+            "Garam Masala",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Chicken",
             "Evening",
@@ -686,15 +706,16 @@
             "Medium Spice",
             "Indian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 23,
-        "name": "Beef Stew",
-        "description": "Hearty stew with tender beef, potatoes, carrots, and onions in a flavorful broth.",
-        "ingredients": [
+        id: 23,
+        name: "Beef Stew",
+        description:
+            "Hearty stew with tender beef, potatoes, carrots, and onions in a flavorful broth.",
+        ingredients: [
             "Beef Stew Meat",
             "Potatoes",
             "Carrots",
@@ -704,9 +725,9 @@
             "Tomato Paste",
             "Worcestershire Sauce",
             "Thyme",
-            "Bay Leaf"
+            "Bay Leaf",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Beef",
             "Evening",
@@ -725,22 +746,23 @@
             "Mild Spice",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 24,
-        "name": "Egg Fried Rice",
-        "description": "Stir-fried rice with eggs, vegetables, and a choice of meat or tofu.",
-        "ingredients": [
+        id: 24,
+        name: "Egg Fried Rice",
+        description:
+            "Stir-fried rice with eggs, vegetables, and a choice of meat or tofu.",
+        ingredients: [
             "Cooked Rice",
             "Eggs",
             "Assorted Vegetables (e.g., Carrots, Peas, Corn)",
             "Soy Sauce",
-            "Green Onions"
+            "Green Onions",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Rice",
             "Afternoon",
@@ -754,23 +776,24 @@
             "Green Onions",
             "Chinese",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 25,
-        "name": "Pasta Carbonara",
-        "description": "Spaghetti pasta with creamy egg sauce, pancetta, and parmesan cheese.",
-        "ingredients": [
+        id: 25,
+        name: "Pasta Carbonara",
+        description:
+            "Spaghetti pasta with creamy egg sauce, pancetta, and parmesan cheese.",
+        ingredients: [
             "Spaghetti",
             "Eggs",
             "Pancetta",
             "Parmesan Cheese",
             "Black Pepper",
-            "Parsley"
+            "Parsley",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Pasta",
             "Evening",
@@ -785,24 +808,25 @@
             "Mild Spice",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 26,
-        "name": "Chicken Quesadilla",
-        "description": "Tortillas filled with shredded chicken and cheese, grilled until crispy.",
-        "ingredients": [
+        id: 26,
+        name: "Chicken Quesadilla",
+        description:
+            "Tortillas filled with shredded chicken and cheese, grilled until crispy.",
+        ingredients: [
             "Flour Tortillas",
             "Chicken",
             "Cheese",
             "Onion",
             "Bell Peppers",
             "Sour Cream",
-            "Guacamole"
+            "Guacamole",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Chicken",
             "Afternoon",
@@ -818,24 +842,25 @@
             "Medium Spice",
             "Mexican",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 27,
-        "name": "Eggplant Parmesan",
-        "description": "Baked eggplant slices layered with marinara sauce, mozzarella, and parmesan cheese.",
-        "ingredients": [
+        id: 27,
+        name: "Eggplant Parmesan",
+        description:
+            "Baked eggplant slices layered with marinara sauce, mozzarella, and parmesan cheese.",
+        ingredients: [
             "Eggplant",
             "Marinara Sauce",
             "Mozzarella Cheese",
             "Parmesan Cheese",
             "Bread Crumbs",
             "Egg",
-            "Flour"
+            "Flour",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Vegetarian",
             "Evening",
@@ -848,15 +873,16 @@
             "Flour",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 28,
-        "name": "Shrimp Scampi",
-        "description": "Shrimp cooked in garlic butter and white wine sauce, served over spaghetti.",
-        "ingredients": [
+        id: 28,
+        name: "Shrimp Scampi",
+        description:
+            "Shrimp cooked in garlic butter and white wine sauce, served over spaghetti.",
+        ingredients: [
             "Shrimp",
             "Spaghetti",
             "Butter",
@@ -864,9 +890,9 @@
             "White Wine",
             "Lemon Juice",
             "Parsley",
-            "Red Pepper Flakes"
+            "Red Pepper Flakes",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Seafood",
             "Evening",
@@ -883,15 +909,16 @@
             "Mild Spice",
             "Italian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
+        bestTimeToServe: "Evening",
     },
     {
-        "id": 29,
-        "name": "Veggie Burger",
-        "description": "Plant-based patty topped with lettuce, tomato, onion, and pickles, served in a bun.",
-        "ingredients": [
+        id: 29,
+        name: "Veggie Burger",
+        description:
+            "Plant-based patty topped with lettuce, tomato, onion, and pickles, served in a bun.",
+        ingredients: [
             "Veggie Patty",
             "Lettuce",
             "Tomato",
@@ -900,9 +927,9 @@
             "Burger Bun",
             "Ketchup",
             "Mustard",
-            "Vegan Cheese"
+            "Vegan Cheese",
         ],
-        "keywords": [
+        keywords: [
             "Lunch",
             "Burger",
             "Vegetarian",
@@ -918,15 +945,16 @@
             "Vegan Cheese",
             "American",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Afternoon"
+        bestTimeToServe: "Afternoon",
     },
     {
-        "id": 30,
-        "name": "Palak Paneer",
-        "description": "Paneer (Indian cottage cheese) cooked in a creamy spinach sauce, flavored with Indian spices.",
-        "ingredients": [
+        id: 30,
+        name: "Palak Paneer",
+        description:
+            "Paneer (Indian cottage cheese) cooked in a creamy spinach sauce, flavored with Indian spices.",
+        ingredients: [
             "Paneer",
             "Spinach",
             "Tomato",
@@ -934,9 +962,9 @@
             "Garlic",
             "Ginger",
             "Cream",
-            "Garam Masala"
+            "Garam Masala",
         ],
-        "keywords": [
+        keywords: [
             "Dinner",
             "Vegetarian",
             "Evening",
@@ -950,8 +978,10 @@
             "Garam Masala",
             "Indian",
             "No Allergies",
-            "No Dietary Restrictions"
+            "No Dietary Restrictions",
         ],
-        "bestTimeToServe": "Evening"
-    }
-]
+        bestTimeToServe: "Evening",
+    },
+];
+
+export default foodItems;

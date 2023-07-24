@@ -19,7 +19,8 @@ app.use(
 // attach main routes
 app.get("/recommendations", async (req, res) => {
     const keywords = req.query.keywords.split(",");
-    const recommendations = await recommendItems(keywords, 3);
+    const count = req.query.length || 5;
+    const recommendations = await recommendItems(keywords, count);
     res.json(recommendations);
 });
 

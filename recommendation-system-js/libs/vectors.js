@@ -1,10 +1,12 @@
+const { processKeywords } = require("../utils/process");
+
 /* it's being for training purpose */
 const createFeatureVectors = (items, vocabulary) => {
     return items.map((item, index) => {
         console.log(`${index} - creating feature vectors...`);
         const featureVector = new Array(vocabulary.length).fill(0);
 
-        item.keywords.forEach((keyword) => {
+        processKeywords(item.keywords).forEach((keyword) => {
             const index = vocabulary.indexOf(keyword);
             if (index !== -1) {
                 featureVector[index] += 1; // Increment based on term frequency or presence

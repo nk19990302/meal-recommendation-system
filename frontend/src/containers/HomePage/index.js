@@ -4,15 +4,20 @@ import { foodPreferenceItems } from "./constants";
 import { HomePageWrapper } from "./index.styled";
 import FoodItemCard from "../../components/FoodItemCard";
 import { getRecommendations } from "../../services/recommendations";
-import OverlayLoginSignupPage, { LS_USER_ID } from "../OverlayLoginSignup";
-import { Button, ErrorText } from "../OverlayLoginSignup/index.styled";
+import OverlayLoginSignupPage, { LS_USER_ID } from "./OverlayLoginSignup";
 import {
     addProfile,
     getProfile,
     updateProfile,
 } from "../../services/userProfile";
+import { Button, ErrorText } from "./OverlayLoginSignup/index.styled";
+import products from "./../../data/food";
 
 const HomePage = () => {
+    const savedKeywords = localStorage.getItem("keywords");
+    const [profileKeywords, setProfileKeywords] = useState(
+        savedKeywords ? savedKeywords.split(",") : []
+    );
     const [preferencesOpen, setPreferencesOpen] = useState();
     const [profileId, setProfileId] = useState();
     const [error, setError] = useState();
@@ -58,10 +63,18 @@ const HomePage = () => {
                 setError(null);
             }
             // fetch recommendations
-            const data = await getRecommendations(selectedOptions);
-            setRecommendedItems(data);
+            const data = await getRecommendations(
+                [...selectedOptions, ...profileKeywords].join(","),
+                8
+            );
+            let items = [];
+            data.forEach((it) => {
+                const item = products.find((_it) => it === _it.id);
+                items.push(item);
+            });
+            setRecommendedItems(items);
         })();
-    }, [selectedOptions, profileId]);
+    }, [selectedOptions, profileId, profileKeywords]);
 
     const handleChipChange = (options) => {
         setSelectedOptions(options);

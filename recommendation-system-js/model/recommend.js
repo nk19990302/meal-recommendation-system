@@ -3,6 +3,7 @@ const {
     calculateCosineSimilarity,
     createFeatureVectorsForKeyword,
 } = require("./../libs/vectors");
+const { processKeywords } = require("../utils/process");
 require("dotenv").config();
 
 const FEATURE_VECTORS_FILE_PATH = process.env.FEATURE_VECTORS_FILE_PATH;
@@ -18,8 +19,14 @@ const recommendItems = async (keywords, n = 10) => {
         console.log("reading feature vectors...");
         featureVectors = await readLargeFileAsync(FEATURE_VECTORS_FILE_PATH);
 
+        console.log("processing keywords...");
+        const processedKeywords = processKeywords(keywords);
+
         console.log("creating target feature vector...");
-        const targetVector = createFeatureVectorsForKeyword(keywords, features);
+        const targetVector = createFeatureVectorsForKeyword(
+            processedKeywords,
+            features
+        );
 
         console.log("calculating similarities...");
         const similarities = featureVectors.map((it) => {

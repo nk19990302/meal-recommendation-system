@@ -2,6 +2,7 @@ const { readFileAsync, writeFileAsync } = require("./../utils/file");
 const {
     stringifyLargeText,
     stringifyLargeTextJson,
+    processKeywords,
 } = require("./../utils/process");
 require("dotenv").config();
 
@@ -20,20 +21,23 @@ const trainModel = async () => {
         const data = JSON.parse(raw.data);
 
         console.log("creating features...");
-        let vocabulary = Array.from(
+        const vocabulary = Array.from(
             new Set(data.flatMap((item) => item.keywords))
         );
-        vocabulary = vocabulary.slice(0, FEATURE_LENGTH);
+
+        console.log("processing keywords...");
+        let processedKeywords = processKeywords(vocabulary);
+        processedKeywords = processedKeywords.slice(0, FEATURE_LENGTH);
 
         console.log("writing features to file...");
         const vocabularyOutput = await writeFileAsync(
             FEATURES_FILE_PATH,
-            stringifyLargeTextJson(vocabulary)
+            stringifyLargeTextJson(processedKeywords)
         );
         console.log("features - ", vocabularyOutput);
 
         console.log("creating feature vectors...");
-        let vectors = createFeatureVectors(data, vocabulary);
+        let vectors = createFeatureVectors(data, processedKeywords);
         console.log("writing vectors to file...");
         const outputResult = await writeFileAsync(
             FEATURE_VECTORS_FILE_PATH,

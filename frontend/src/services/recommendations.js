@@ -1,7 +1,9 @@
-export const getRecommendations = async (keywords = []) => {
+export const getRecommendations = async (keywords = "", count) => {
     const response = await fetch(
         "http://localhost:8080/recommendations?keywords=" +
-            keywords.join(",").toLowerCase()
+            keywords +
+            "&length=" +
+            count
     );
     const data = response.json();
     return data;

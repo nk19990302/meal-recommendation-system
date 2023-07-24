@@ -7,7 +7,7 @@ import {
     Input,
     OverlayContainer,
 } from "./index.styled";
-import { login, signup } from "../../services/auth";
+import { login, signup } from "../../../services/auth";
 
 export const LS_USER_ID = "LS_USER_ID";
 export const LS_USER_NAME = "LS_USER_NAME";
